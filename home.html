@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <link rel="stylesheet" href="bootstrap.css">
+        <link rel="stylesheet" href="bootstrapproject.css">        
+        <script src="bootstrap.js"></script>
+        <script src="popper.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>DEFENCE SECTOR</title>
+        <script>
+            $(document).ready(function(){
+                $("input").keyup(function(){
+                    if($("#usr").val()==""||$("#address").val()==""||$("#mobile").val()==""||$("#email").val()==""||$("#pwd").val()==""||$("#cpwd").val()=="")
+                    {
+                        $("#sumbit").attr("disabled",true);
+                    }
+                    else
+                    {
+                        $("#submit").attr("disabled",false);
+                    }
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <!--HEADER-->
+        <header class="bi">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <img src="img7.jpg" class="img-fluid mx-auto rounded-circle" height="100px" width="150">
+                    </div>
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" id="a">
+                        <h3 style="margin-top:35px; color: grey;">DEFENCE SECTOR</h3>
+                        <div id="b"></div>
+                    </div>
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <form class="form-inline" style="margin-top: 35px;">
+                            <div class="input-group">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search....">
+                                <button class="btn btn-success" type="submit">Submit</button>&nbsp;&nbsp;&nbsp;
+                                <!--maodal button-->
+                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#staticBackdrop" id="r">REGISTRATION</button>                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+<!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="staticBackdropLabel" style="color: darkblue;">REGISTRATION</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="/action_page.php" name="f" method="post">
+                                                    <div class="form-group">
+                                                        <label for="usr" style="color: orange;">NAME:</label>
+                                                        <input type="text" class="form-control" id="usr" name="usr" placeholder="Enter Your Name...">
+                                                    </div><br>   
+                                                    <label for="gender" style="color: white;">GENDER:</label>                         
+                                                    <div class="form-check-inline">   
+                                                        <label class="form-check-label">
+                                                          <input type="radio" class="form-check-input" name="optradio" value="MALE">MALE
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check-inline">
+                                                        <label class="form-check-label">
+                                                          <input type="radio" class="form-check-input" name="optradio" value="FEMALE">FEMALE
+                                                        </label>
+                                                    </div><br><br>
+                                                    <div class="form-group">
+                                                        <label for="address" style="color: green;">ADDRESS:</label>
+                                                        <textarea class="form-control" rows="2" id="address" name="text"></textarea>
+                                                    </div><br>
+                                                    <div class="form-group">
+                                                        <label for="mobile" style="color: blue;">MOBILE:</label>
+                                                        <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Enter Your mobile number...">
+                                                    </div><br>
+                                                    <div class="form-group">
+                                                        <label for="email" style="color: orange;">Email address:</label>
+                                                        <input type="email" class="form-control" placeholder="Enter email" id="email" name="email">
+                                                    </div><br>
+                                                    <div class="form-group">
+                                                        <label for="pwd" style="color: white;">Password:</label>
+                                                        <input type="text" class="form-control" placeholder="Enter password" id="pwd">
+                                                    </div><br>
+                                                    <div class="form-group">
+                                                        <label for="cpwd" style="color: green;">Confirm Password:</label>
+                                                        <input type="password" class="form-control" placeholder="Enter confirm password" id="cpwd">
+                                                    </div><br>
+                                                    <button type="reset" class="btn btn-light" id="reset" value="CLEAR">Clear</button>
+                                                    <button type="submit" class="btn btn-primary" id="submit" disabled="disabled">Submit</button>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+        <!--NAVIGATION-->
+        <nav class="navbar navbar-expand-md  bg-info navbar-dark sticky-top">
+            <div class="container-fluid">                
+                <button class="navbar-toggler btn btn-outline-success" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav navbar-nav-pills mx-auto">
+                        <li class="nav-item active"><a class="nav-link"  href="Home.html" style="width: 200px; text-align:center;">HOME</a></li>
+                        <li class="nav-item active"><a class="nav-link"  href="#r" style="width: 200px; text-align:center;">REGISTRATION</a></li>
+                        <li class="nav-item active"><a class="nav-link"  href="#content" style="width: 200px; text-align:center;">ABOUT</a></li>
+                        <li class="nav-item active"><a class="nav-link"  href="#article" style="width: 200px; text-align:center;">CONTACT US</a></li>
+                    </ul>
+                </div>	
+            </div>
+        </nav>
+        
+        <section>
+            <!--carousel-->
+            <div class="container-fluid bg-secondary" id="carousel">
+                <div id="demo" class="carousel slide carousel-fade" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>                   
+                    </ul>
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">    
+                        <div class="carousel-item active">
+                            <a href="#ha1"><img src="army5.jpg" alt="INDIAN ARMY" width="100%" height="500vh" class="d-block rounded img-thumbnail"></a>
+                            <div class="carousel-caption">
+                                <h1 style="color: #4E9258; text-shadow: 5px 5px 2px grey;" class="text-left">INDIAN ARMY</h1>
+                                <h3 style="color: #6B8E23;" class="text-left">Chief of Army Staff of the Indian Army</h3>
+                                <h2 style="color: #728C00;" class="text-left"><b><i>General Manoj Pande</i></b></h2>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <a href="#" target="_blank"><img src="navylogo1.jpg" alt="INDIAN NAVY" width="100%" height="500vh" class="d-block rounded img-thumbnail"></a>
+                            <div class="carousel-caption">
+                                <h1 style="color: blue; text-shadow: 5px 5px 2px black;" class="text-right">INDIAN NAVY</h1>
+                                <h3 style="color: darkblue;" class="text-right">Chief of the Naval Staff (India)</h3>
+                                <h2 style="color: blue;" class="text-right"><b><i>Admiral R. Hari Kumar</i></b></h2>
+                            </div>
+                        </div>
+    
+                        <div class="carousel-item">
+                            <a href="#" target="_blank"><img src="airlogo.jpg" alt="INDIAN AIR FORCE" width="100%" height="500vh" class="d-block rounded img-thumbnail"></a>
+                            <div class="carousel-caption">
+                                <h1 style="color: lime; text-shadow: 5px 5px 2px whitesmoke;" class="text-right">INDIAN AIR FORCE</h1>
+                                <h3 style="color: #0000A5;" class="text-right">Chief of the Air Staff (India)</h3>
+                                <h2 style="color: #38ACEC;" class="text-right"><b><i> Air Chief Marshal VR Chaudhari</i></b></h2>
+                            </div>
+                        </div>                    
+                    </div>
+                    <!-- Left and right controls -->    
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div><br><br>
+            </div>
+            <!--content1-->
+            <div class="container-fluid">
+                <div class="row" id="content">
+                    <hr>
+	    <marquee style="background-color: grey;" direction="right" scrollamount="10" behavior="alternate" width="100%"><marquee direction="up" height="50px" behavior="alternate"><h5 style="color: white;">Service is the supreme religion</h5></marquee>
+	    </marquee>
+	    <hr>
+                    <div class="col-lg-4 col-xl-4 rounded img-thumbnail" id="ia1">
+                        <h2 style="color: orange;" class="text-center">INDIAN ARMY</h2>
+                        <p style="color: white;" class="text-center">
+                            The Indian Army is the land-based branch and the largest component of the Indian Armed Forces. 
+                            The President of India is the Supreme Commander of the Indian Army, and its professional head is the Chief of Army Staff, who is a four-star general.
+                        </p>
+                        <h5 style="color: yellow;" class="text-center"> “Either I will come back after hoisting the Tricolor, or I will come back wrapped in it. But I’ll be back for sure.” – Captain Vikram Batra (Param Vir Chakra)</h5>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-4  rounded img-thumbnail" id="in1"> 
+                        <h2 style="color: white;" class="text-center">INDIAN NAVY</h2>
+                        <p style="color:white" class="text-center">
+                            The Indian Navy is the naval branch of the Indian Armed Forces. 
+                            The President of India is the Supreme Commander of the Indian Navy. The Chief of Naval Staff, a four-star admiral, commands the navy.
+                        </p>
+                        <h5 style="color: yellow;" class="text-center">“The Navy is much more than the job, much more than the administration of the country. It is a lifestyle. It is found in your blood.”</h5>
+                    </div>
+                    <div  class="col-md-6 col-lg-4 col-xl-4 rounded img-thumbnail" id="iaf1">
+                        <h2 style="color:green" class="text-center">INDIAN AIR FORCE</h2>
+                        <p style="color: white" class="text-center">
+                            The Indian Air Force is the air arm of the Indian Armed Forces. 
+                            Its complement of personnel and aircraft assets ranks third amongst the air forces of the world. Its primary mission is to secure Indian airspace and to conduct aerial warfare during armed conflict.
+                        </p>
+                        <h5 style="color: yellow;" class="text-center">.“Only air power can defeat air power. The actual elimination or even stalemating of an attacking air force can be achieved only by a superior air force.”</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--content2-->
+        <div class="container-fluid">
+            <div class="row" id="article">
+                <div class="col-lg-4 col-xl-4 rounded img-thumbnail" id="ia2">
+                    <!-- <iframe src="http://cncwebworld.com" width="100%" height="250"> -->
+                    <!-- </iframe> -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15086.475064146096!2d73.0175363!3d19.0365136!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x813bca6aabd7e658!2sCNC%20WEBWORLD!5e0!3m2!1sen!2sin!4v1653637522899!5m2!1sen!2sin" width="300px" height="150px" style="border:0; margin-top: 50px; margin-left: 50px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded"></iframe>                    
+                    <h4 style="color: lightgrey;"><i class="fa fa-map-marker" style="font-size:48px;color:greenyellow"></i>LOCATION</h4>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-4 rounded img-thumbnail" id="in2">
+                    <form action="/action_page.php" id="f1">
+                        <div class="form-group">
+                            <i class="fa fa-address-book" style="font-size:24px; color: brown;"></i>
+                            <label for="phone" style="color: darkmagenta">Mobile Number:</label>
+                            <input type="phone" class="form-control" id="phone" placeholder="Enter mobile no..." name="phone">
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-commenting" style="font-size:24px; color: greenyellow;"></i>
+                            <label for="comment" style="color: darkorange">Comment:</label>
+                            <textarea class="form-control" id="comment" placeholder="Enter Your Feedback..."></textarea>
+                          </div>
+                        <button type="button" class="btn btn-success">Feedback</button>
+                    </form>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-4 rounded img-thumbnail" id="iaf2">
+                    <h5 style="color: aqua; margin-left: 50px;">CONTACT US:-</h5>
+                    <i class="fa fa-facebook-official" style="font-size:36px; color: #38ACEC; margin-left: 50px;"></i>&nbsp;&nbsp;
+                    <i class="fa fa-google" style="font-size:36px; color: aliceblue;"></i>&nbsp;&nbsp;
+                    <i class="fa fa-instagram" style="font-size:36px; color: aquamarine;"></i>&nbsp;&nbsp;
+                    <i class="fa fa-linkedin-square" style="font-size:36px;color:whitesmoke"></i>&nbsp;&nbsp;
+                    <i class="fa fa-twitter" style="font-size:36px;color:lightblue"></i>&nbsp;&nbsp;
+                    <i class="fa fa-whatsapp" style="font-size:36px;color:green"></i>&nbsp;&nbsp;
+                    <i class="fa fa-youtube-play" style="font-size:36px;color:red"></i>
+                </div>
+            </div>
+        </div>
+        <footer class="footer-copyright text-center py-3 bg-primary">
+            <h5 style="color: orange; text-shadow: 2px 2px 1px greenyellow;">© 2022 Copyright:All Rights Are Reserved....</h5>
+        </footer>    
+    </body>
+</html>
